@@ -1,6 +1,7 @@
 # post-grid-term-slug-by-page-url
 
-`function post_grid_filter_query_args_extra($query_args){
+```
+function post_grid_filter_query_args_extra($query_args){
 
     if(is_page()):
 
@@ -29,4 +30,6 @@
 
 }
 
-add_filter('post_grid_filter_query_args','post_grid_filter_query_args_extra');`
+add_filter('post_grid_filter_query_args','post_grid_filter_query_args_extra');
+
+```
