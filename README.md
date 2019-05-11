@@ -1,9 +1,9 @@
 # post-grid-term-slug-by-page-url
 
 ```
-function post_grid_filter_query_args_extra($query_args){
+function post_grid_filter_query_args_extra($query_args, $grid_id){
 
-    if(is_page()):
+    if(is_page() && $grid_id == '3445'):
 
         $current_post_id = get_the_ID();
         $post = get_post($current_post_id);
@@ -30,6 +30,6 @@ function post_grid_filter_query_args_extra($query_args){
 
 }
 
-add_filter('post_grid_filter_query_args','post_grid_filter_query_args_extra');
+add_filter('post_grid_filter_query_args','post_grid_filter_query_args_extra', 99,2);
 
 ```
